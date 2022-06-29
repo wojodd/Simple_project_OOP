@@ -31,17 +31,17 @@
 
     <?php
 
-include('class\calcPrice.php');
-if(isset($_POST["numDinner"]) && isset($_POST["numDessert"]) && isset($_POST["numDrink"])){ //لأن بتكون فارغة في البداية فلازم نحط هذا الشرط عشان مايطلع ايرور
-$numDinner  = $_POST["numDinner"];  // استدعاء المتغيرات من الانبوت تيكست
-$numDessert = $_POST["numDessert"];
-$numDrink   = $_POST["numDrink"];
+    include('class\calcPrice.php');
+    if (isset($_POST["numDinner"]) && isset($_POST["numDessert"]) && isset($_POST["numDrink"])) { //لأن بتكون فارغة في البداية فلازم نحط هذا الشرط عشان مايطلع ايرور
+        $numDinner  = $_POST["numDinner"];  // استدعاء المتغيرات من الانبوت تيكست
+        $numDessert = $_POST["numDessert"];
+        $numDrink   = $_POST["numDrink"];
 
 
-$bill = new calcPrice();//create object 
-echo $bill->dinner($_POST["numDinner"])->dessert($_POST["numDessert"])->Drink($_POST["numDrink"])->bill;//method chining
-}
-?>
+        $bill = new calcPrice(); //create object 
+        echo $bill->dinner($_POST["numDinner"])->dessert($_POST["numDessert"])->Drink($_POST["numDrink"])->bill; //method chining
+    }
+    ?>
 
 </body>
 
